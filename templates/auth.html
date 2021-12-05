@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconlnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Tavolga</title>
+</head>
+<body>
+
+<div class="center">
+   <img class="img" src="https://i.ibb.co/2FmWy1Y/logo.png" alt="">
+       <div class="window">
+           <form method="post">
+        <div class="entry">Вход</div>
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {% for field in form%}
+        <div class="tag">{{ field.label }}</div>
+        <div class="field">
+            {{ field }}
+        </div>
+        {% endfor %}
+
+        <div class="button--padding">
+            <button class="button" href="#">
+                <div class="button__text">Войти</div>
+            </button>
+        </div>
+    </form>
+
+   
+</div>
+</div>
+
+</body>
+<script src="https://kit.fontawesome.com/ca62975fc8.js" crossorigin="anonymous"></script>
+
+</html>

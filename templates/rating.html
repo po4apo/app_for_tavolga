@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Tavolga</title>
+</head>
+<body>
+
+<div class="center">
+
+
+    <header class="header">
+        {% if back %}
+            <div class="chevron"><a style="text-decoration: none;" href="{% url back %}"><i
+                    class="fas fa-chevron-left"></i></a></div>
+        {% endif %}
+        <img class="img__header" src="https://i.ibb.co/2FmWy1Y/logo.png" alt="">
+    </header>
+    <br>
+    <div class="nomination">{{ name }}</div>
+    <br>
+
+
+    <div class="users">
+        {% for obj in object_list %}
+
+            <div class="users__block">
+                <div class="user__border">
+                    <div class="user__text">
+                    <div class="user__id">1. </div>
+                    <div class="user__name"><a style="text-decoration: none; color: black" href="">{{ obj.old.document_json.first_name }}
+                    {{ obj.old.document_json.last_name }} - {{ obj.old.document_json.stage_1|add:obj.old.document_json.stage_2|add:obj.new.document_json.stage_3    }}</a></div>
+                 </div>
+                </div>
+             </div>
+
+               {% endfor %}
+    </div>
+
+</div>
+
+
+</body>
+<script src="https://kit.fontawesome.com/ca62975fc8.js" crossorigin="anonymous"></script>
+
+</html>

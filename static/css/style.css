@@ -1,0 +1,215 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.window {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #333;
+    width: 270px;
+    height: 250px;
+    text-align: center;
+    
+    flex-direction: row;
+}
+
+.img {
+    padding: 60px 0;
+}
+
+.center {
+    display: flex;
+    margin: 0;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.window--2 {
+    padding-top: 40px;
+    width: 300px;
+    height: 110px;
+
+}
+
+.tag {
+font-size: 12px;
+font-weight: 600;
+text-align: left;
+padding: 10px 0 10px 0;
+
+}
+
+.entry {
+    padding-bottom: 20px;
+    color: #0518A1;
+}
+.field {
+    opacity: .8;
+    border-radius: 7px;
+    
+}
+
+.field__header {
+    
+    opacity: .5;
+    font-size: 12px;
+    padding: 10px 10px 12px 15px;
+    border: 1px solid #C7C9D9;
+    border-radius: 8px;
+    text-align: left;
+    color: black;
+}
+
+.button--padding {
+    padding-top: 60px;
+}
+
+.button {    
+    border: 1px solid;
+    background-color: #0518A1;
+;
+    border-radius: 7px;
+}
+
+.button__text {
+    font-size: 18px;
+    color: #fff;
+    padding: 16.5px 105px;
+}
+
+.button:hover {
+    background-color: #00ACAB;
+    transition: .3s linear;
+}
+
+
+
+
+
+.users {
+    display: flex;
+    flex-direction: column;
+}
+.users__block {
+    width: 325px;
+    height: 73px;
+    
+}
+
+.user__border {
+    
+    background-color: #F8F8F8;
+    border: 1px solid #F8F8F8;
+    border-radius: 10px;
+}
+
+.user__id {
+    padding-right: 20px;
+}
+
+.user__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    line-height: 19.5px;    
+    padding: 10px;
+}
+
+.users__points {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    width: 100px;
+    
+    
+}
+
+.user__rateing {
+    padding-left: 130px;
+    text-align: center;
+}
+
+.point__check {
+    width: 100%;
+}
+
+.point__border--true {
+    border-radius: 8px;
+    border: 1px solid #00CB6ACC;
+    background-color: #00CB6ACC;
+    color: #fff;
+    
+    text-align: center;
+    
+
+}
+
+.point__border--false {
+    border-radius: 8px;
+    border: 1px solid #F26666CC;
+    background-color: #F26666CC;
+    color: #fff;
+
+}
+
+.point__number {
+    font-weight: 700;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.point__border {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1px 4px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #0518A1;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1470px;
+    width: 366px;
+    height: 42px;
+    position: fixed;
+    top:0;
+    
+    
+}
+
+.chevron {
+    font-size: 18px;
+    padding-top: 10px;
+    color: #00ACAB;
+    position: absolute;
+    left: 10%;
+
+
+}
+
+.img__header {
+    width: 120px;
+    height: 23px;
+    padding-top: 10px;
+    vertical-align: center;
+    margin: 0 auto;
+}
+
+.nomination {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0518A1;
+    
+}
+

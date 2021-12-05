@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3&ckf8^om3(93w-d$ul9d$_9v)gw70^k2#p+i&0$5w&22r0an9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'web_app'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,19 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Подлкючаем кастомную модель для пользователя
+AUTH_USER_MODEL = 'web_app.CustomUser'
+LOGIN_REDIRECT_URL = '/events/'
+
+
+# Настройки для работы с фото
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+MEDIA_URL = '/midia/'
+
+# Для CSS
+
+STATICFILES_DIRS = [
+    BASE_DIR, 'static',
+]
+
