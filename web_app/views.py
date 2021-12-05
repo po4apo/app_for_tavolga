@@ -54,7 +54,7 @@ class UserView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['name'] = 'Участники'
         context['path'] = 'nomination'
-        context['back'] = 'events'
+        context['back'] = 'nomination'
         return context
 
     def get(self, request, *args, **kwargs):
